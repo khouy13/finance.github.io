@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+      body{
+        margin:0px;
+        padding:0px;
+    }
+  header{
+    width:auto;
+    height:30px;
+    background-color:white;
+    text-align: center;
+    padding:10px;
+  }
+  h1{
+    margin-top:0px;
+    color:black;
+  }
+  .div1{
+    margin:0px;
+    padding:0px;
+    width:100%;
+    height:50px;
+    background-color:black;
+    display:flex;
+    justify-content: space-between;
+  }
+  .ul1{
+    margin:0px;
+    display:flex;
+    list-style:none;
+    float:left;
+    padding:0px;
+  }
+  .ul2{
+    list-style:none;
+    background-color:white;
+    width:160px;
+    max-height:0px;
+    padding:10px;
+    overflow:hidden;
+  }
+  .ul2.t1{
+    max-height:200px;;
+    background-color:lightslategrey;
+  }
+  .ul2 li{
+    margin-top:20px;
+    color:white;
+    margin-right:30px;
+    font-size:15px;
+    animation:color 1s;
+  }
+  .ul2 li:hover{
+    color:royalblue;
+  }
+  .div1 a{
+    margin-top:10px;
+    margin-right:20px;
+    color:white;
+    text-decoration:none
+  }
+  .div1 .ul1 li img{
+    margin-left:0px;
+    width:40px;
+    height:58px;
+  }
+  .div1 .ul1 li h3{
+    color:white;
+    margin-left:30px;
+    margin-top:10px;
+  }
+  @media screen and(max-width:226px){
+      .div1{
+        height:60px;
+        width:100px;
+      }
+  }
+ .div2{
+  margin-left:50px;
+ }
+ .c1{
+  margin-left:20px;
+ }
+ .classt{
+  margin:0px;
+  z-index:-1;
+ }
+ .div0{
+  display: flex;
+ }
+ .a1{
+  text-decoration:none;
+  color:white;
+ }
+ form{
+  width:450px;
+  background-color:lightblue;
+  border:solid 2px white;
+  margin-top:100px;
+  margin-left:200px;
+  justify-content: center;
+  padding:20px;
+ }
+ .reset{
+  float:right;
+ }
+p{
+  margin-left:10px;
+}
+.i{
+  margin-left:100px;
+  margin-top:200px;
+  background-color:lightblue;
+  height:45px;
+  padding:5px;
+  width:auto;
+}
+input{
+  border:solid 1.2px lightblue;
+  border-radius:5px;
+  height:20px;
+  margin-bottom:20px;
+  margin-left:20px;
+}
+.r{
+  margin-left:0px;
+}
+@media screen and (max-width:1054px){
+  .div0{
+    display:inline;
+  }
+  .ul2{
+    display:flex;
+    width:auto;
+  }
+  input{
+    width:80px;
+  }
+}
+@media screen and (max-width:702px){
+  form{
+    margin-left:0px;
+    width:auto;
+  }
+  .i{
+    margin-left:0px;
+    width:auto;
+  }
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>Mathematique Financiere</h1>
+     </header>
+     <div class="div1">
+         <ul class="ul1">
+           <li><img src="Capture.PNG" onclick="f1();"/></li>
+           <li><h3>Menu</h3></li>
+         </ul>
+         <a href="mailto:abderrazzakkhouy790@gmail.com">contacte</a>
+     </div>
+     <div class="div0">
+           <ul class="ul2" id="ul2">
+            <li><a class="a1" href="math.html">page principale</a></li>
+            <li><a class="a1" href="maths.html">calcule d'interet simple</a></li>
+            <li><a class="a1" href="mathc.html">clacule d'interet composes</a></li>
+         </ul>
+<!--#######################################################################################################################-->
+<form name="form1">
+  le capital itial <q>Dh</q>:
+  <input type="text" name="capital" id="capital" value=" "/><br/>
+  le taux de placement:
+  <input type="text" name="taux" id="taux" value=" "/><br/>
+  la durée de placement:
+  <input type="text" name="duree" id="duree" value=" "/>
+  <select name="list">
+  <option value="jour">jour</option>
+  <option value="annee">annee</option>
+  <option value="mois">mois</option>
+  <option value="quainza">quainza</option>
+  <option value="semestre">semestre</option>
+  <option value="trimistre">trimistre</option>
+  </select>
+  <input type="button" name="button1"  value="Calculer" onclick="controle(form1);"/>
+  <input type="reset" class="reset" name="reset" id="reset"/><br/> 
+ </form>
+ <div class="i"><strong>la valeur acquis :<strong id="p21"></strong><i>DH</i><br/>
+ l'interet composé:<strong id="p22"></strong><i>DH</i> 
+ </div>
+  </div>
+ <script>
+  let x4;
+  const t=[360,1,12,24,2,4];
+  function f1(){
+     var x=document.getElementById('ul2');
+     x.classList.toggle('t1');
+     }
+   function controle(){
+   var x1=parseFloat(document.form1.capital.value);
+   var x2=parseFloat(document.form1.taux.value);
+   var x3=parseFloat(document.form1.duree.value);
+   var i=form1.list.selectedIndex;
+   x4=x1*Math.pow((1+x2),x3/t[i]);
+   alert(x4);
+   document.getElementById('p21').innerHTML=x4;
+   document.getElementById('p22').innerHTML=parseFloat(x4)-parseFloat(x1);
+   }
+       </script>  
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin:0px;
+        padding:0px;
+    }
+  header{
+    width:auto;
+    height:30px;
+    background-color:white;
+    text-align: center;
+    padding:10px;
+  }
+  h1{
+    margin-top:0px;
+    color:black;
+  }
+  .div1{
+    margin:0px;
+    padding:0px;
+    width:100%;
+    height:50px;
+    background-color:black;
+    display:flex;
+    justify-content: space-between;
+  }
+  .ul1{
+    margin:0px;
+    display:flex;
+    list-style:none;
+    float:left;
+    padding:0px;
+  }
+  .ul2{
+    list-style:none;
+    background-color:white;
+    width:160px;
+    max-height:0px;
+    padding:10px;
+    overflow:hidden;
+  }
+  .ul2.t1{
+    max-height:200px;;
+    background-color:lightslategrey;
+  }
+  .ul2 li{
+    margin-top:20px;
+    color:white;
+    margin-right:30px;
+    font-size:15px;
+    animation:color 1s;
+  }
+  .ul2 li:hover{
+    color:royalblue;
+  }
+  .div1 a{
+    margin-top:10px;
+    margin-right:20px;
+    color:white;
+    text-decoration:none
+  }
+  .div1 .ul1 li img{
+    margin-left:0px;
+    width:40px;
+    height:58px;
+  }
+  .div1 .ul1 li h3{
+    color:white;
+    margin-left:30px;
+    margin-top:10px;
+  }
+  @media screen and (max-width:226px){
+      .div1{
+        height:60px;
+        width:100px;
+      }
+  }
+ .div2{
+  margin-left:50px;
+ }
+ .c1{
+  margin-left:20px;
+ }
+ .classt{
+  margin:0px;
+  z-index:-1;
+ }
+ .div0{
+  display: flex;
+ }
+ .a1{
+  text-decoration:none;
+  color:white;
+ }
+ .div3{
+  margin-top:10px;
+  margin-left:60px;
+  background-color:lightslategrey;
+  border:solid 1px white;
+  border-radius:12px;
+  opacity:100;
+  padding:20px;
+ }
+ .div3 p{
+  color:white
+ }
+ @media screen and (max-width:1000px) {
+  .div0{
+    display: inline;
+  }
+  .div3{
+    margin-left:0px;
+    display:block;
+    justify-content:center;
+  }
+  .ul2{
+    display:flex;
+    width:auto;
+  }
+ }
+</style>
+<body>
+    <header>
+       <h1>Mathematique Financiere</h1>
+    </header>
+    <div class="div1">
+        <ul class="ul1">
+          <li><img src="Capture.PNG" onclick="f1();"/></li>
+          <li><h3>Menu</h3></li>
+        </ul>
+        <a href="mailto:abderrazzakkhouy790@gmail.com">contacte</a>
+    </div>
+    <div class="div0">
+          <ul class="ul2" id="ul2">
+          <li><a class="a1" href="math.html">page principale</a></li>
+          <li><a class="a1" href="maths.html">calcule d'interet simple</a></li>
+          <li><a class="a1" href="mathc.html">clacule d'interet composes</a></li>
+        </ul>
+<div class="classt">
+<h1 class="c1">Introduction aux mathématiques financières :</h1>
+<div class="div2">
+<p>Les mathématiques financières sont perçues comme une sorte de passage obligé dans les études de la gestion.</p>
+<p>On regroupe sous cette appellation l’ensemble des techniques mathématique permettant de traiter des phénomènes régissant</p>
+<p>les marchés financiers, tel que les calculs relatifs aux taux d’intérêt, les annuités, les emprunts…, mais </p>
+<p>ainsi la modélisation mathématique du comportement aléatoire des marchés financiers.</p>
+</div>
+<h2 class="c1">Définition de l’intérêt :</h2>
+<div class="div2">
+<p>L'intérêt est la rémunération due par l'emprunteur au prêteur en contrepartie de la mise à</p>
+<p>disposition d'un capital pendant une durée déterminée. On distingue deux types d’intérêt: l’intérêt</p>
+<p>simple et l’intérêt composé</p>
+</div>
+<h3 class="c1">Eléments nécessaires pour le calcul de l’intérêt :</h3>
+<div class="div2">
+<p>a.Le capital Le montant de l’intérêt varie selon l’importance du capital. L’intérêt est proportionnel au capital.</p>
+<p>b.Le taux de placement Le taux de placement s’exprime le plus souvent sous la forme d’un pourcentage.</p>
+</div>
+</div>
+<div class="div3">
+  <h4>interet simple :</h4>
+  <p><abbr title="l'interet">I = </abbr><abbr title="capital itial">C<sub>0</sub> * </abbr><abbr title="taux de placement">T</abbr> * <abbr title="la duree de placement">N</abbr></p>
+  <p>A = C<sub>0</sub> + I</p>
+  <h4>interet composee :</h4>
+  <p>A = C<sub>0</sub> * (1+T)<sup>N</sup></p>
+  <p>I= A - C<sub>0</sub></p>
+  <h4>avec :</h4>
+  <pI : interet</p>
+  <p>C<sub>0</sub> : capital initial</p>
+  <p>N :duree de placement</p>
+  <p>T : taux de placement</p>
+  <p>A : la valeur acquis</p>
+
+</div>
+</div>
+    <script>
+      function f1(){
+      var x=document.getElementById('ul2');
+      x.classList.toggle('t1');
+      }
+    </script>
+</body>
+</html>
